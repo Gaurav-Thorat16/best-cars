@@ -58,6 +58,14 @@ def dealer_detail(request, dealer_id):
     return render(request, "djangoapp/dealer_detail.html", {"dealer": dealer, "dealer_id": dealer_id})
 
 
+def post_review(request, dealer_id):
+    dealer_names = {1: "Best Cars Downtown"}
+    dealer_name = dealer_names.get(dealer_id)
+    if dealer_name is None:
+        return render(request, "djangoapp/dealer_not_found.html", status=404)
+    return render(request, "djangoapp/post_review.html", {"dealer_id": dealer_id, "dealer_name": dealer_name})
+
+
 @ensure_csrf_cookie
 def login_page(request):
     return render(request, "djangoapp/login.html")

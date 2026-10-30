@@ -22,6 +22,12 @@ class StaticPageTests(TestCase):
         self.assertContains(response, "Best Cars Downtown")
         self.assertContains(response, "The team made the whole purchase clear and easy.")
 
+    def test_post_review_page_shows_review_form(self):
+        response = self.client.get("/dealer/1/review/")
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Best Cars Downtown")
+        self.assertContains(response, "Submit review")
+
     def test_about_page(self):
         response = self.client.get(reverse("about"))
         self.assertEqual(response.status_code, 200)
