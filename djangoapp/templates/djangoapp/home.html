@@ -1,0 +1,18 @@
+{% extends "djangoapp/base.html" %}
+{% block title %}Best Cars | Find your next car{% endblock %}
+{% block content %}
+<section class="hero-section">
+    <div class="container hero-content">
+        <p class="eyebrow">A smarter way to shop</p>
+        <h1>Find the car that<br><em>fits your life.</em></h1>
+        <p class="hero-copy">Browse trusted dealers, compare confident choices, and drive away feeling good about what comes next.</p>
+        <a class="btn btn-accent btn-lg" href="{% url 'contact' %}">Start your search <span aria-hidden="true">&#8594;</span></a>
+    </div>
+</section>
+<section class="intro-strip">
+    <div class="container row g-4 align-items-center">
+        <div class="col-lg-5"><p class="eyebrow accent-text">Why Best Cars</p><h2>Car buying should feel like a good decision.</h2></div>
+        <div class="col-lg-6 offset-lg-1"><p class="large-copy">We bring the useful stuff to the front: honest information, people who listen, and a selection built around how you actually live.</p></div>
+    </div>
+</section>
+{% endblock %}
