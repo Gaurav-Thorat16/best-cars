@@ -1,0 +1,32 @@
+# Fetch dealers by state evidence
+# Start the dealer database service first. The Express service listens on port 3000.
+# State used for this request: Kansas
+
+curl -i http://127.0.0.1:3000/fetchDealers/Kansas
+
+# Output:
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+[
+  {
+    "id": 8,
+    "name": "Best Cars Wichita",
+    "city": "Wichita",
+    "address": "515 North Market Street",
+    "zip": "67202",
+    "state": "Kansas",
+    "phone": "(555) 014-2088",
+    "email": "wichita@bestcars.example"
+  },
+  {
+    "id": 9,
+    "name": "Best Cars Overland Park",
+    "city": "Overland Park",
+    "address": "8800 West 119th Street",
+    "zip": "66213",
+    "state": "Kansas",
+    "phone": "(555) 014-2099",
+    "email": "overlandpark@bestcars.example"
+  }
+]
