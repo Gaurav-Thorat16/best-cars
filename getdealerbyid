@@ -1,0 +1,26 @@
+# Fetch dealer by ID evidence
+# Start the dealer database service first. The Express service listens on port 3000.
+# Dealer ID used for this request: 1
+
+curl -i http://127.0.0.1:3000/fetchDealer/1
+
+# Output:
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "id": 1,
+  "name": "Best Cars Downtown",
+  "city": "San Francisco",
+  "address": "2400 Market Street",
+  "zip": "94114",
+  "state": "CA",
+  "phone": "(555) 014-2024",
+  "email": "downtown@bestcars.example",
+  "website": "https://bestcars.example/dealers/downtown",
+  "hours": {
+    "monday_friday": "9:00 AM - 6:00 PM",
+    "saturday": "10:00 AM - 4:00 PM",
+    "sunday": "Closed"
+  }
+}
