@@ -1,0 +1,32 @@
+:root { --ink: #172121; --muted: #64706c; --paper: #f5f4ef; --cream: #e8e4d7; --accent: #d3f36b; --line: #cfd1c8; }
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: "DM Sans", sans-serif; }
+body::before { content: ""; display: block; height: 4px; background: var(--accent); }
+h1, h2, h3, .brand-mark { font-family: "Space Grotesk", sans-serif; }
+h1 { font-size: clamp(3.5rem, 8vw, 7rem); letter-spacing: -0.07em; line-height: .92; font-weight: 600; }
+h1 em { color: var(--accent); font-style: normal; }
+h2 { font-size: clamp(2.2rem, 5vw, 4.5rem); letter-spacing: -0.06em; line-height: .95; }
+.site-nav { background: var(--ink); padding: 1.25rem 0; }
+.brand-mark { color: #fff; font-size: 1.05rem; letter-spacing: .05em; font-weight: 700; }
+.brand-mark span { color: var(--accent); }
+.nav-link { color: #c9d0ca; font-size: .9rem; }
+.nav-link:hover, .nav-link.active { color: var(--accent); }
+.about-hero { background: var(--ink); color: #fff; min-height: 62vh; display: flex; align-items: center; }
+.hero-inner { padding: 6rem 1rem; }
+.eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: .72rem; font-weight: 700; margin-bottom: 1.5rem; }
+.hero-copy { max-width: 34rem; color: #bdc8c0; font-size: 1.1rem; line-height: 1.6; margin-top: 2rem; }
+.story-section, .team-section { padding: 7rem 0; }
+.story-section { background: var(--cream); }
+.story-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1fr); gap: 5rem; align-items: start; }
+.accent-text { color: #758a1f; }
+.story-copy { color: var(--muted); font-size: 1.2rem; line-height: 1.7; max-width: 38rem; }
+.section-heading { margin-bottom: 3rem; }
+.team-card { background: #fff; height: 100%; }
+.team-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; filter: saturate(.8); }
+.team-card-body { padding: 1.5rem; }
+.team-card h3 { font-size: 1.7rem; margin-bottom: .35rem; }
+.team-card p { color: var(--muted); line-height: 1.6; }
+.team-card .role { color: #758a1f; font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 1rem; }
+.team-card a { color: var(--ink); font-size: .9rem; text-decoration-color: var(--accent); text-underline-offset: .25rem; }
+.site-footer { background: var(--ink); color: #9eaaa2; padding: 2.5rem 0; font-size: .85rem; }
+@media (max-width: 767px) { .story-grid { grid-template-columns: 1fr; gap: 2rem; } .story-section, .team-section { padding: 5rem 0; } }
