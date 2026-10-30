@@ -1,0 +1,35 @@
+GitHub Actions workflow: Django CI
+Trigger: push and pull_request
+Job: test
+Runner: ubuntu-latest
+
+Step 1: Check out repository
+Completed successfully
+
+Step 2: Set up Python 3.12
+Completed successfully
+
+Step 3: Install dependencies
+$ pip install -r requirements.txt
+Successfully installed Django-5.2.18
+Completed successfully
+
+Step 4: Run Django system checks
+$ python manage.py check
+System check identified no issues (0 silenced).
+Completed successfully
+
+Step 5: Run Django tests
+$ python manage.py test djangoapp.tests
+Found 11 test(s).
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.733s
+
+OK
+Destroying test database for alias 'default'...
+Completed successfully
+
+Workflow result: SUCCESS
