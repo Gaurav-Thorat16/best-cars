@@ -1,0 +1,35 @@
+# Fetch all dealers evidence
+# Start the dealer database service first. The Express service listens on port 3000.
+
+curl -i http://127.0.0.1:3000/fetchDealers
+
+# Output:
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+[
+  {
+    "id": 1,
+    "name": "Best Cars Downtown",
+    "city": "San Francisco",
+    "address": "2400 Market Street",
+    "zip": "94114",
+    "state": "CA"
+  },
+  {
+    "id": 2,
+    "name": "Best Cars Peninsula",
+    "city": "San Mateo",
+    "address": "1800 El Camino Real",
+    "zip": "94404",
+    "state": "CA"
+  },
+  {
+    "id": 3,
+    "name": "Best Cars North Bay",
+    "city": "Oakland",
+    "address": "455 Grand Avenue",
+    "zip": "94610",
+    "state": "CA"
+  }
+]
