@@ -28,6 +28,12 @@ class StaticPageTests(TestCase):
         self.assertContains(response, "Best Cars Downtown")
         self.assertContains(response, "Submit review")
 
+    def test_post_review_submission_is_displayed(self):
+        response = self.client.post("/dealer/1/review/", {"review": "Excellent service", "purchased_car": "on", "car_make": "Toyota", "car_model": "RAV4", "purchase_date": "2025-08-16", "car_year": "2025"})
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Review posted")
+        self.assertContains(response, "Excellent service")
+
     def test_about_page(self):
         response = self.client.get(reverse("about"))
         self.assertEqual(response.status_code, 200)

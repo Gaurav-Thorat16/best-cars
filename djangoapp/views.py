@@ -63,7 +63,17 @@ def post_review(request, dealer_id):
     dealer_name = dealer_names.get(dealer_id)
     if dealer_name is None:
         return render(request, "djangoapp/dealer_not_found.html", status=404)
-    return render(request, "djangoapp/post_review.html", {"dealer_id": dealer_id, "dealer_name": dealer_name})
+    submitted_review = None
+    if request.method == "POST":
+        submitted_review = {
+            "text": request.POST.get("review", ""),
+            "purchased_car": request.POST.get("purchased_car") == "on",
+            "car_make": request.POST.get("car_make", ""),
+            "car_model": request.POST.get("car_model", ""),
+            "purchase_date": request.POST.get("purchase_date", ""),
+            "car_year": request.POST.get("car_year", ""),
+        }
+    return render(request, "djangoapp/post_review.html", {"dealer_id": dealer_id, "dealer_name": dealer_name, "submitted_review": submitted_review})
 
 
 @ensure_csrf_cookie

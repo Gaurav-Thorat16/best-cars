@@ -56,6 +56,10 @@ h2 { font-size: clamp(2rem, 4vw, 3.5rem); letter-spacing: -0.05em; line-height: 
 .review-page-hero { padding-bottom: 6rem; }
 .post-review-section { background: var(--cream); }
 .review-form { background: #fff; padding: 2rem; }
+.posted-review { background: #fff; border-left: 4px solid var(--accent); padding: 2rem; }
+.posted-review h3 { font-family: "Space Grotesk", sans-serif; font-size: 2rem; }
+.posted-review-text { color: var(--muted); font-size: 1.15rem; line-height: 1.6; }
+.posted-review p:not(.eyebrow) { color: var(--muted); line-height: 1.6; }
 .form-field { display: grid; gap: .45rem; margin-bottom: 1.25rem; }
 .form-field label, .checkbox-field { color: var(--muted); font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .form-field input, .form-field select, .form-field textarea { border: 1px solid var(--line); background: var(--paper); color: var(--ink); font: inherit; padding: .8rem; }
