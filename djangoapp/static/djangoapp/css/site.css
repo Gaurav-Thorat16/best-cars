@@ -26,6 +26,10 @@ h2 { font-size: clamp(2rem, 4vw, 3.5rem); letter-spacing: -0.05em; line-height: 
 .dealers-section { padding: 7rem 0; background: var(--paper); }
 .section-heading-row { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 3rem; }
 .section-note { color: var(--muted); max-width: 20rem; line-height: 1.6; margin-bottom: .35rem; }
+.state-filter { display: flex; align-items: center; gap: .75rem; margin-top: 1rem; }
+.state-filter label { color: var(--muted); font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; }
+.state-filter select { border: 1px solid var(--line); background: #fff; color: var(--ink); padding: .55rem .75rem; font: inherit; }
+.empty-state { color: var(--muted); }
 .dealer-card { background: #fff; border-top: 3px solid var(--ink); padding: 1.6rem; height: 100%; }
 .dealer-state { color: #758a1f; font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 .dealer-card h3 { font-family: "Space Grotesk", sans-serif; font-size: 1.45rem; letter-spacing: -.04em; }
