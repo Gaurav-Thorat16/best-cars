@@ -36,6 +36,28 @@ def contact(request):
     return render(request, "djangoapp/contact.html")
 
 
+def dealer_detail(request, dealer_id):
+    dealers = {
+        1: {
+            "name": "Best Cars Downtown",
+            "city": "San Francisco",
+            "address": "2400 Market Street",
+            "zip": "94114",
+            "state": "California",
+            "phone": "(555) 014-2024",
+            "email": "downtown@bestcars.example",
+            "reviews": [
+                {"author": "Avery Johnson", "rating": 5, "text": "The team made the whole purchase clear and easy.", "sentiment": "Positive"},
+                {"author": "Morgan Davis", "rating": 4, "text": "Helpful staff and a good selection of vehicles.", "sentiment": "Positive"},
+            ],
+        }
+    }
+    dealer = dealers.get(dealer_id)
+    if dealer is None:
+        return render(request, "djangoapp/dealer_not_found.html", status=404)
+    return render(request, "djangoapp/dealer_detail.html", {"dealer": dealer, "dealer_id": dealer_id})
+
+
 @ensure_csrf_cookie
 def login_page(request):
     return render(request, "djangoapp/login.html")
