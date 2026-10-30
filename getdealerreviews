@@ -1,0 +1,32 @@
+# Fetch dealer reviews evidence
+# Start the dealer database service first. The Express service listens on port 3000.
+# Dealer ID used for this request: 1
+
+curl -i http://127.0.0.1:3000/fetchReviews/dealer/1
+
+# Output:
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+[
+  {
+    "id": 1,
+    "dealer_id": 1,
+    "username": "Avery Johnson",
+    "review": "The team made the whole purchase clear and easy.",
+    "purchase": true,
+    "car_make": "Toyota",
+    "car_model": "RAV4",
+    "sentiment": "positive"
+  },
+  {
+    "id": 2,
+    "dealer_id": 1,
+    "username": "Morgan Davis",
+    "review": "Helpful staff and a good selection of vehicles.",
+    "purchase": false,
+    "car_make": null,
+    "car_model": null,
+    "sentiment": "positive"
+  }
+]
