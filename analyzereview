@@ -1,0 +1,11 @@
+# Sentiment analysis evidence
+# Start the Flask sentiment service first. It listens on port 5000.
+# Review text: Fantastic services
+
+curl -i http://127.0.0.1:5000/analyze/Fantastic%20services
+
+# Output:
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{"sentiment":"positive"}
