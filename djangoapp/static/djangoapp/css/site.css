@@ -11,6 +11,7 @@ h2 { font-size: clamp(2rem, 4vw, 3.5rem); letter-spacing: -0.05em; line-height: 
 .nav-link { color: #c9d0ca; font-size: .9rem; }
 .nav-link:hover { color: var(--accent); }
 .nav-user { color: #c9d0ca; font-size: .9rem; }
+.navbar-auth-status { color: var(--accent); font-size: .78rem; font-weight: 700; margin-left: 1rem; letter-spacing: .04em; }
 .nav-cta { border-radius: 0; font-weight: 600; padding: .65rem 1rem; }
 .hero-section { min-height: 72vh; display: flex; align-items: center; background: var(--ink); color: #fff; position: relative; overflow: hidden; }
 .hero-section::after { content: ""; position: absolute; width: 48vw; height: 48vw; border: 1px solid rgba(211,243,107,.3); border-radius: 50%; right: -12vw; top: 10%; }
@@ -30,6 +31,7 @@ h2 { font-size: clamp(2rem, 4vw, 3.5rem); letter-spacing: -0.05em; line-height: 
 .dealer-card h3 { font-family: "Space Grotesk", sans-serif; font-size: 1.45rem; letter-spacing: -.04em; }
 .dealer-card p:not(.dealer-state) { color: var(--muted); line-height: 1.6; min-height: 3.2rem; }
 .dealer-card a { color: var(--ink); font-size: .88rem; font-weight: 700; text-decoration-color: var(--accent); text-underline-offset: .25rem; }
+.dealer-card .review-link { display: block; color: #758a1f; margin-top: 1rem; }
 .large-copy, .lead { font-size: 1.35rem; line-height: 1.55; color: var(--muted); }
 .page-hero { background: var(--ink); color: white; padding: 7rem 0 8rem; }
 .narrow-content { max-width: 48rem; }
@@ -46,4 +48,4 @@ h2 { font-size: clamp(2rem, 4vw, 3.5rem); letter-spacing: -0.05em; line-height: 
 .site-footer { background: var(--ink); color: #9eaaa2; padding: 2.5rem 0; font-size: .85rem; }
 .footer-brand { font-size: .9rem; }
 .footer-meta { align-self: end; }
-@media (max-width: 767px) { h1 { font-size: 3.5rem; } .hero-section::after { width: 80vw; height: 80vw; right: -35vw; } .intro-strip, .dealers-section, .content-section { padding: 5rem 0; } .section-heading-row { display: block; } .section-note { margin-top: 1.5rem; } .footer-meta { align-self: start; } }
+@media (max-width: 767px) { h1 { font-size: 3.5rem; } .hero-section::after { width: 80vw; height: 80vw; right: -35vw; } .intro-strip, .dealers-section, .content-section { padding: 5rem 0; } .section-heading-row { display: block; } .section-note { margin-top: 1.5rem; } .navbar-auth-status { margin-left: auto; margin-right: .75rem; } .footer-meta { align-self: start; } }
