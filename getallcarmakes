@@ -1,0 +1,32 @@
+# Fetch all car makes and models evidence
+# Start Django first with: .venv/bin/python manage.py runserver 127.0.0.1:8000
+
+curl -i http://127.0.0.1:8000/get_cars
+
+# Output:
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {
+    "make": "Toyota",
+    "models": [
+      {"id": 1, "name": "Camry", "type": "Sedan", "year": 2025, "dealer_id": 1},
+      {"id": 2, "name": "RAV4", "type": "SUV", "year": 2025, "dealer_id": 1}
+    ]
+  },
+  {
+    "make": "Honda",
+    "models": [
+      {"id": 3, "name": "Civic", "type": "Sedan", "year": 2025, "dealer_id": 2},
+      {"id": 4, "name": "CR-V", "type": "SUV", "year": 2024, "dealer_id": 2}
+    ]
+  },
+  {
+    "make": "Subaru",
+    "models": [
+      {"id": 5, "name": "Outback", "type": "Wagon", "year": 2024, "dealer_id": 3},
+      {"id": 6, "name": "Forester", "type": "SUV", "year": 2025, "dealer_id": 3}
+    ]
+  }
+]
